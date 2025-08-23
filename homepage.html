@@ -1,38 +1,55 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Einfache Vollbild-Blobs</title>
-<link rel="stylesheet" href="styles.css">
-<script src="script.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Homepage</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="min-vh-100">
 
-<!-- HINTERGRUND -->
-<div class="container">
-  <div class="blobs">
-    <div class="shape-blob one"></div>
-    <div class="shape-blob two"></div>
-    <div class="shape-blob three"></div>
-    <div class="shape-blob four"></div>
-    <div class="shape-blob five"></div>
-    <div class="shape-blob six"></div>
-    <div class="shape-blob seven"></div>
-  </div>
-</div>
-
-<!-- Inhalt -->
-<div class="site-content">
-    <header class="p-10 sticky-top">
-        <h1>study buddy</h1>  
-    </header>
-    <div class="card">
-        <div class="card-body">
-            <img src="https://i.pinimg.com/1200x/a6/e8/c3/a6e8c32546ae4a5c6417164fdac0af2a.jpg" alt="lofi">
+  <!-- HINTERGRUND (umbenannt; kein Konflikt mit Bootstrap .container) -->
+  <div class="blob-bg">
+    <div class="blobs">
+      <div class="shape-blob one"></div>
+      <div class="shape-blob two"></div>
+      <div class="shape-blob three"></div>
+      <div class="shape-blob four"></div>
+      <div class="shape-blob five"></div>
+      <div class="shape-blob six"></div>
+      <div class="shape-blob seven"></div>
     </div>
-    <div class="btn-container"><button class="btn-effect-1">Sign up</button></div>
-</div>
+  </div>
+
+  <!-- INHALT -->
+  <div class="site-content position-relative z-1">
+    <header class="sticky-top">
+      <div class="container py-3">
+        <h1 class="m-0 brand-title">study buddy</h1>
+      </div>
+    </header>
+
+    <main class="container text-center py-4">
+      <!-- Bild (ohne Card, exakt wie vorher) -->
+      <div class="mx-auto mb-4 img-wrap" style="max-width: 720px;">
+        <img
+          src="https://i.pinimg.com/1200x/a6/e8/c3/a6e8c32546ae4a5c6417164fdac0af2a.jpg"
+          alt="lofi"
+          class="custom-image">
+      </div>
+
+      <!-- Button (dein alter Look) -->
+      <div class="d-flex justify-content-center">
+        <button class="btn-effect-1 px-4 py-2">Sign up</button>
+      </div>
+    </main>
+  </div>
 
 </body>
 </html>
+
