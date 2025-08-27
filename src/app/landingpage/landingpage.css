@@ -31,26 +31,6 @@ h2{
   color: #52476bff;
   font-family: "Quicksand", sans-serif;
 }
-.btn-effect-1 {
-  position: relative;
-  padding: 12px 30px;
-  font-size: 13px;
-  font-weight: bold;
-  border: 1px solid #fff;
-  border-radius: 120px;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  overflow: hidden;
-  color: #342f3f;
-  background: rgba(220, 180, 238, 0.3);
-  box-shadow: 0 0 5px rgb(155, 132, 192);
-}
-.btn-effect-1:hover {
-  border: 1px solid rgb(191, 195, 255);
-  background: rgb(171, 179, 255);
-  color: #ffffff;
-  box-shadow: 0 0 20px rgb(217, 201, 255), 0 0 40px rgb(255, 224, 253);
-}
 
 .feature-badge {
   position: relative;
@@ -101,8 +81,9 @@ h2{
     right: -1rem;
     top: -2rem;
   }
-  .row.g-2.mb-3 {
-    --bs-gutter-y: 3rem;
+  .row.g-0.mb-3 {
+    --bs-gutter-y: 4rem;
+    --bs-gutter-x: 4rem;
     margin-bottom: 3rem;
   }
 }

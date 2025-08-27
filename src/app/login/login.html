@@ -1,0 +1,28 @@
+<div class="d-flex flex-column p-4 rounded-4 border bg-white bg-opacity-50 w-100 mx-auto">
+    <h3 class="h4 mb-3">Welcome back!</h3>
+    <form class="d-flex flex-column h-100">
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input
+                type="email"
+                class="form-control"
+                placeholder="you@example.com"
+            />
+        </div>
+        <div class="mb-4">
+            <label class="form-label">Password</label>
+            <input
+                type="password"
+                class="form-control"
+                placeholder="••••••••"
+            />
+        </div>
+        <div class="mt-auto text-center">
+            <button class="btn-effect-1 px-4 py-2">Log in</button>
+            <hr class="hr" />
+            <p class="mb-0">
+                Dont have an account yet? <a href="#" (click)="switchToRegister.emit()">Sign up</a>
+            </p>
+        </div>
+    </form>
+</div>

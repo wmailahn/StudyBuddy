@@ -1,5 +1,4 @@
-<div class="site-content position-relative z-1">
-
+<div class="position-relative z-1">
       <main class="container py-5">
         <!-- Row 1: Slogan + Beschreibung -->
         <div class="row g-5 mb-5">
@@ -20,8 +19,8 @@
           </div>
         </div>
 
-        <!-- Row 2: Bild + Login/ Registrierungsfeld -->
-        <div class="row gy-2 mb-3 align-items-start">
+        <!-- Row 2: Bild + Login/Registrierung -->
+        <div class="row g-0 mb-3 align-items-start">
           <div class="col-12 col-lg-7 col-xxl-7 align-items-center">
             <div class="img-wrapper mx-auto">
               <img
@@ -42,46 +41,13 @@
               />
             </div>
           </div>
-
           <div class="col-12 col-lg-5 col-xxl-5">
-            <div
-              class="d-flex flex-column p-4 rounded-4 border bg-white bg-opacity-50 w-100 mx-auto"
-            >
-              <h3 class="h4 mb-3">Sign up for free!</h3>
-              <form class="d-flex flex-column h-100">
-                <div class="mb-3">
-                  <label class="form-label">Email</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    placeholder="you@example.com"
-                  />
-                </div>
-                <div class="mb-4">
-                  <label class="form-label">Password</label>
-                  <input
-                    type="password"
-                    class="form-control"
-                    placeholder="••••••••"
-                  />
-                </div>
-                <div class="mt-auto text-center">
-                  <button class="btn-effect-1 px-4 py-2">Sign up</button>
-                  <hr class="hr" />
-                  <p class="mb-0">
-                    Already have an account? <a href="#">Log in</a>
-                  </p>
-                </div>
-              </form>
-            </div>
+            <!-- NOCH UNSICHER OB ROUTING ODER SO LASSEN -->
+            @if(!showLogin) {
+            <app-register (switchToLogin)="onSwitchToLogin()"></app-register>}
+            @if(showLogin) {
+            <app-login (switchToRegister)="onSwitchToRegister()"></app-login>}
           </div>
         </div>
       </main>
-      <footer class="mt-auto">
-        <div class="container py-3 text-center">
-          <small class="text-muted"
-            >&copy; 2024 Study Buddy. All rights reserved.</small
-          >
-        </div>
-      </footer>
     </div>

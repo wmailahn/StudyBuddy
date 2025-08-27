@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'blobs',
+  selector: 'app-blobs',
   imports: [],
   templateUrl: './blobs.html',
   styleUrl: './blobs.css'
