@@ -1,0 +1,109 @@
+.img-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: visible;
+  position: relative;
+}
+.overlay-icons {
+  position: absolute;
+  width: clamp(36px, 12vw, 64px);
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+  animation: floaty 4s ease-in-out infinite;
+}
+.overlay-icons.img-books {
+  position: absolute;
+  left: 0rem;
+  bottom: 3.5rem;
+}
+.overlay-icons.img-headphones {
+  position: absolute;
+  right: 0rem;
+  top: -1rem;
+}
+.bi-stars {
+  color: #fce9a0;
+  text-shadow: #a49bb8 0 0 5px, #af99e2 0 0 10px ;
+}
+h2{
+  color: #52476bff;
+  font-family: "Quicksand", sans-serif;
+}
+.btn-effect-1 {
+  position: relative;
+  padding: 12px 30px;
+  font-size: 13px;
+  font-weight: bold;
+  border: 1px solid #fff;
+  border-radius: 120px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  color: #342f3f;
+  background: rgba(220, 180, 238, 0.3);
+  box-shadow: 0 0 5px rgb(155, 132, 192);
+}
+.btn-effect-1:hover {
+  border: 1px solid rgb(191, 195, 255);
+  background: rgb(171, 179, 255);
+  color: #ffffff;
+  box-shadow: 0 0 20px rgb(217, 201, 255), 0 0 40px rgb(255, 224, 253);
+}
+
+.feature-badge {
+  position: relative;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid #fff;
+  border-radius: 120px;
+  overflow: hidden;
+  color: #342f3f;
+  background: rgba(220, 180, 238, 0.3);
+  box-shadow: 0 0 5px rgb(155, 132, 192);
+}
+
+@keyframes floaty {
+  0%   { transform: translateY(0) rotate(-2deg); }
+  50%  { transform: translateY(-8px) rotate(2deg); }
+  100% { transform: translateY(0) rotate(-2deg); }
+}
+
+/* Media Queries*/
+/* großer Desktop (≥1400px) */
+@media (max-width: 1400px) {
+  .img-wrapper { max-width: 600px; }
+}
+/* (schmaler) Laptop */
+@media (max-width: 1200px) {
+  .img-wrapper { max-width: 540px; }
+}
+/* mobile: volle Breite */
+@media (max-width: 992px) {
+  .img-wrapper { max-width: 100%; }
+}
+/* Anpassungen der Icons für größere Bildschirme */
+@media (min-width: 577px) {
+  .img-wrapper {
+    max-width: none;
+    aspect-ratio: unset;
+  }
+  .overlay-icons {
+    width: clamp(60px, 10vw, 120px);
+  }
+  .overlay-icons.img-books {
+    left: -0.5rem;
+    bottom: -2rem;
+  }
+  .overlay-icons.img-headphones {
+    right: -1rem;
+    top: -2rem;
+  }
+  .row.g-2.mb-3 {
+    --bs-gutter-y: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
