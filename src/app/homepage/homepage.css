@@ -1,0 +1,32 @@
+.speech-bubble {
+  position: relative;
+  background: #f0f0f0;
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  margin-left: 8%;
+  max-width: 300px;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* der kleine "Pfeil" unten */
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  top: 100%;  /* Position unterhalb der Blase */
+  left: 15%;     /* horizontaler Versatz */
+  border-width: 10px;
+  border-style: solid;
+  border-color: #f0f0f0 transparent transparent transparent;
+}
+
+.robo-img {
+  width: 25%;
+  height:auto;
+}
+
+@media (min-width: 768px) {
+  .robo-img {
+    width: 20%;
+  }
+}
